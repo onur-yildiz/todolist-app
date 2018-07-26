@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+}
+
+a:not(.todo-item) {
+  padding: .25em;
+  background-color: rgb(26, 89, 170);
+  border: 1px solid silver;
+  color: white;
+  box-shadow: 0 1px 1px 0 #898989;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+button {
+  box-shadow: 0 1px 1px 0 #898989;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(151, 161, 211);
+  border-top: 1px solid silver;
+  border-left: 1px solid silver;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+button:not(:focus):hover {
+  box-shadow: none;
+  transition: .2s;
+  background: radial-gradient(rgb(151, 161, 211), rgb(132, 105, 206));
+}
+
+button:focus {
+  transition: .5s;
+  background-color: rgb(132, 105, 206);
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-bottom: 1px solid silver;
+  border-right: 1px solid silver;
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}

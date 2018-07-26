@@ -1,0 +1,27 @@
+<div class="form-container" >
+  <form [formGroup]="todosForm" (ngSubmit)="onSubmit()">
+    <button [disabled]="!todosForm.valid" type="submit" >{{editMode ? 'Save':'Add'}}</button>
+    <input type="text" style="display:none" formControlName="id">
+    <div>
+      <label for="name">Event Name</label>
+      <input type="text" id="name" formControlName="name">
+      <p class="form-warning" *ngIf="todosForm.get('name').invalid && todosForm.get('name').touched">Please enter an event name.</p>
+    </div>
+    <div>
+      <label for="location">Location</label>
+      <input type="text" id="location" formControlName="location">
+    </div>
+    <div>
+      <label for="date">Date</label>
+      <input type="date" id="date" formControlName="date">
+    </div>
+    <div>
+      <label for="color">Color</label>
+      <input type="color" id="color" formControlName="color">
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <textarea type="text" id="description" rows="5" formControlName="description"></textarea>
+    </div>
+  </form>
+</div>

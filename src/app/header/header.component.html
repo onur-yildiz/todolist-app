@@ -1,0 +1,18 @@
+<!-- <div class="navbar"> -->
+  <div class="navbar-flex">
+    <ul>
+      <div class="navbar-content" >
+        <li (click)="onNewPage(0)" class="logo" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ><a routerLink="" >ToDoList App</a></li>
+        <li (click)="onNewPage(0)" routerLinkActive="active" ><a routerLink="/todos" >Events</a></li>
+        <li (click)="onNewPage(1)" routerLinkActive="active" ><a routerLink="/recycle-bin" >Recycle Bin</a></li>
+      </div>
+      <div  class="navbar-content navbar-right">
+        <li (click)="onNewPage(2)" *ngIf="!loggedIn" routerLinkActive="active" ><a routerLink="/user/register" >Register</a></li>
+        <li (click)="onNewPage(3)" *ngIf="!loggedIn" routerLinkActive="active" ><a routerLink="/user/login" >Login</a></li>
+        <li (click)="onNewPage(4)" *ngIf="loggedIn" routerLinkActive="active" ><a routerLink="/user/profile" >Profile</a></li>
+        <li (click)="onNewPage(5)" *ngIf="loggedIn" (click)="onLogout()"><a>Logout</a></li>
+      </div>
+    </ul>
+  </div>
+  <div class="transition-box"  id="transition-box"></div>
+<!-- </div> -->

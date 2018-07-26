@@ -1,0 +1,77 @@
+.form-container {
+  display: flex;
+  align-content: flex-end;
+  padding: 0 .5em;
+}
+
+.form-container form {
+  min-width: 60%;
+  max-width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: flex-end;
+}
+
+form {
+  background-color: aliceblue;
+  padding: 1em;
+}
+
+.form-warning {
+  clear: both;
+  font-weight: lighter;
+  color: rgb(130, 130, 130);
+}
+
+form button {
+  padding: 1em 2em;
+  width: 25%;
+}
+
+form div {
+  margin: 1em 0;
+  height: 1.5em;
+  width: 100%;
+  align-self: center;
+}
+
+form div input, form div select {
+  float: right;
+}
+
+form div label {
+  float: left;
+  font-weight: bolder;
+}
+
+input {
+  height: 100%;
+  border-bottom-color: #ccc;
+  border-right-color: #ccc;
+  min-width: 50%;
+  border-width: 1px;
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+@media only screen and (max-width: 700px) {
+  form button {
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 1em;
+  }
+
+  form {
+    width: 100%;
+  }
+}

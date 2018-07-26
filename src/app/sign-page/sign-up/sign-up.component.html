@@ -1,0 +1,27 @@
+<div class="form-container" >
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+    <div>
+      <label for="">Full Name</label>
+      <input formControlName="name" type="text">
+      <p class="form-warning" *ngIf="!registerForm.get('name').valid && registerForm.get('name').touched">Please enter your password.</p>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input formControlName="email" type="email">
+      <p *ngIf="registerForm.get('email').hasError('existingEmail')" class="form-warning">An account with this email exists.</p>
+      <p class="form-warning" *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched && !registerForm.get('email').hasError('existingEmail')">Please enter your password.</p>
+
+    </div>
+    <div>
+      <label for="phoneNum">Phone Number</label>
+      <input formControlName="phoneNum" type="text">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input formControlName="password" type="password">
+      <p class="form-warning" *ngIf="!registerForm.get('password').valid && registerForm.get('password').touched">Please enter your password.</p>
+    </div>
+    <button [disabled]="!registerForm.valid" type="submit">Register</button>
+    <a class="form-warning or-login" routerLink="../login">or login.</a>
+  </form>
+</div>

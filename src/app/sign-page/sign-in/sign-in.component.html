@@ -1,0 +1,17 @@
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <div>
+        <label for="email">Email</label>
+        <input formControlName="email" type="email">
+        <p class="form-warning" *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">Please enter a valid email.</p>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input formControlName="password" type="password">
+        <p class="form-warning" *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">Please enter your password.</p>
+      </div>
+      <button [disabled]="!loginForm.valid" type="submit">Login</button>
+      <a class="form-warning or-register" routerLink="../register">or register.</a>
+    </form>
+  </div>
+  <div class="form-warning" id="note"><p>(Test email: t@t, password: t)</p></div>

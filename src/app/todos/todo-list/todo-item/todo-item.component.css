@@ -1,0 +1,53 @@
+a {
+  transition: .5s;
+  height: 100%;
+  color: black;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.todo-item {
+  width: 100%;
+  padding: 1em .5em;
+  text-overflow: ellipsis;
+}
+
+.header {
+  transition: .5s;
+  width: calc(100% - 1em);
+  padding: 1em .5em;
+  background: rgba(0, 0, 0, .1);
+}
+
+a:hover .header {
+  transition: 1s;
+  background: rgba(0, 0, 0, .6);
+  color: white;
+}
+
+a.active {
+  transition: .75s;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  margin: .25em;
+}
+
+.description {
+  margin: 2em 0;
+}
+
+.click-warning {
+  float: right;
+  color: rgb(91, 91, 91);
+}
+
+a:hover .click-warning {
+  font-weight: bolder;
+  color: rgb(53, 53, 53);
+}

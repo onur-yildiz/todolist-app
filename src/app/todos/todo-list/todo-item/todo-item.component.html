@@ -1,0 +1,20 @@
+<div class="todo-item" [style.background-color]="todo.color">
+  <a
+    [routerLink]="[todo.id]"
+    routerLinkActive="active">
+    <div class="info-container">
+      <div class="header">
+        <h4>{{todo.name}}</h4>
+      </div>
+      <div class="sub-header">
+        <span>{{todo.location}}</span>
+        <span>{{todo.date | date:'fullDate'}}</span>
+      </div>
+    </div>
+    <hr>
+    <div class="description">
+      <p>{{todo.description | shorten:20 }}</p>
+    </div>
+    <p class="click-warning">> Click to see in full deteail.</p>
+  </a>
+</div>

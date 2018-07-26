@@ -1,0 +1,23 @@
+.profile-container {
+  padding: 1em;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: rgb(207, 217, 226);
+}
+
+p {
+  width: 100%;
+  margin: 1em .5em;
+}
+
+button {
+  background-color: darkred;
+  margin-left: auto;
+  padding: .25em .5em;
+}
+
+button:hover {
+  background: radial-gradient(darkred, orangered);
+}

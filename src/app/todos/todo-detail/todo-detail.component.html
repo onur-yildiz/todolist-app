@@ -1,0 +1,22 @@
+<div class="section-container">
+  <div class="detail-options">
+    <a *ngIf="!recycleMode" routerLink="edit" >Edit Event</a>
+    <a *ngIf="recycleMode" (click)="onRecycle()" >Recycle</a>
+    <a (click)="onDelete()" >Delete Event</a>
+  </div>
+  <div class="detail-container" id="detail-container">
+    <div class="info-container">
+      <div class="header detail" >
+        <h4>{{todo.name}}</h4>
+      </div>
+      <div class="sub-header detail">
+        <span>{{todo.location}}</span>
+        <span>{{todo.date | date:'fullDate'}}</span>
+      </div>
+    </div>
+    <hr class='detail'>
+    <div class="description detail">
+      <p>{{todo.description}}</p>
+    </div> 
+  </div>
+</div>

@@ -1,0 +1,97 @@
+
+.todo-options {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 1em;
+}
+
+.todo-options button {
+  margin: 0 .1em;
+  padding: 1em;
+}
+
+.search-section {
+  margin-top: 1em;
+  height: 2em;
+  display: flex;
+}
+
+.search-section div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  text-align: center;
+}
+
+.search-section div:not(:first-child) {
+  margin-left: 1em;
+}
+
+.search-section div > * {
+  margin-left: .25em;
+}
+
+.search-section button {
+  padding: 0 1em;
+}
+
+.search-section label {
+  align-self: center;
+}
+
+input:focus, select:focus {
+  transition: .5s;
+  background-color: #f2f2f2;
+  border-color: darkblue;
+  outline: none;
+}
+
+option:checked {
+  background-color: darkblue;
+  color: whitesmoke;
+}
+
+.pages {
+  width: 10%;
+  max-width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  text-align: center;
+}
+
+.pages button {
+  margin: .5em .1em;
+  padding: .5em .75em;
+}
+
+.pages button:focus {
+  background-color: orangered;
+}
+
+.todolist-container {
+  width: 50%;
+  float: left;
+}
+
+.todolist {
+  margin: .1em;
+  min-height: 15em;
+  width: calc(50% - .2em);
+  float: left;
+  display: flex;
+  justify-content: stretch;
+}
+
+@media only screen and (max-width: 700px) {
+  .todolist-container {
+    width: calc(100% - 2em);
+  }
+  .todolist {
+    width: 100%;
+  }
+}

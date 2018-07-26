@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="todo-options">
+    <button (click)="onRecycleAll()" type="button">Recycle All</button>
+    <button (click)="onDeleteAll()" type="button">Delete All</button>
+  </div>
+  
+  <div class="search-section">
+    <div>
+      <label for="search-by">Search by </label>
+      <select [(ngModel)]="searchBy" id="search-by">
+        <option value="name">Name</option>
+        <option value="location">Location</option>
+        <option value="description">Description</option>
+      </select>  
+      <input [(ngModel)]="searchQuery" placeholder="Search..." type="text">
+    </div>
+    <div>
+      <label for="sort-by">Sort by</label>
+      <select [(ngModel)]="sortBy" id="sort-by">
+        <option value="name">Name</option>
+        <option selected value="date">Date</option>
+        <option value="location">Location</option>
+        <option value="color">Color</option>
+      </select>
+      <button *ngIf="!order" (click)="order = true" type="button">&uarr;</button>
+      <button *ngIf="order" (click)="order = false" type="button">&darr;</button> <!-- descending -->
+    </div>
+  </div>
+  
+  <div class="pages">
+    <div *ngFor="let page of pageArray; let i = index">
+      <button (click)="activePage = i + 1" type="button">{{i + 1}}</button>
+    </div>
+  </div>
+  
+  <div class="todolist-container">
+    <app-todo-item class="todolist"
+    *ngFor="let todo of todos  | search:searchQuery:searchBy:sortBy:order | pager:activePage:pageSize " 
+    [todo]="todo" ></app-todo-item>
+  </div>
+  
+  <div class="router-container">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

@@ -1,0 +1,50 @@
+
+.detail-container {
+  margin: 1em 0;
+  padding: 1em;
+  background: rgba(0, 0, 0, .1);
+}
+
+.detail {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.initialized {
+  transition: .35s;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.detail-options {
+  height: 3em;
+  display: flex;
+}
+
+.detail-options > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: .25em;
+}
+
+.detail-options a:hover {
+  background: radial-gradient(rgb(103, 118, 189), rgb(108, 82, 180));
+  box-shadow: none;
+}
+
+.header {
+  padding: .5em;
+  background: rgba(0, 0, 0, .15);
+}
+
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  margin: .25em;
+}
+
+.description {
+  margin: 2em 0;
+}
+
